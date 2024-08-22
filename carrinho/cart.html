@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Produtos</title>
+    
+</head>
+<body>
+    <style>
+        .container{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <div class="container" id="container">ddgvgdg</div>
+
+    <button id="action-btn"> X</button>
+    
+
+    <script>
+
+        
+        function toggle(){
+            div.style.display = (div.style.display === 'none') ? 'block' : 'none'
+
+        }
+        function toggleClass (){
+            div.classList.toggle('hide')
+
+        }
+
+        const div = document.querySelector('container')
+        const button = document.querySelector('button')
+        
+        button.addEventListener('click', toggleClass)
+    </script>
+    
+
+    <script src="cart.js"></script>
+</body>
+</html>

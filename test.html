@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Sections</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        section {
+            display: none; /* Todas as sections começam escondidas */
+        }
+
+        section.active {
+            display: block; /* Somente a section ativa é mostrada */
+        }
+
+    </style>
+
+    <button onclick="mostrarSection('section1')">Mostrar Section 1</button>
+    <button onclick="mostrarSection('section2')">Mostrar Section 2</button>
+    <button onclick="mostrarSection('section3')">Mostrar Section 3</button>
+    <button onclick="mostrarSection('section4')">Mostrar Section 4</button>
+
+    <section id="section1">Conteúdo da Section 1</section>
+    <section id="section2">Conteúdo da Section 2</section>
+    <section id="section3">Conteúdo da Section 3</section>
+    <section id="section4">Conteúdo da Section 4</section>
+
+    <script>
+        function mostrarSection(id){
+            //esconder todas ass sections
+            const section = document.querySelectorAll('section');
+            section.forEach(section =>{
+                section.classList.remove('active');
+
+        });
+
+        //mostrar apenas a section selecionada
+        const sectionToShow = document.getElementById(id);
+        sectionToShow.classList.add("active");
+    }
+     </script>
+</body>
+</html>

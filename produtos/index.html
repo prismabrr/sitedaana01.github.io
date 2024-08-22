@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaAna</title>
+
+    <!-- fonte awesome cdn lin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- costum css file link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    
+    <!-- =======swiper css====== -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+    <style>
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header sections starts -->
+
+    <header class="header">
+        <a href="#" class="logo">
+            <h1></h1>
+        </a>
+
+        <nav class="navbar">
+            <a href="../quem-somos\quem-somos.html">Quem somos</a>
+            <a href="../produtos/index.html">Produtos</a>
+            <a href="../index.html">Grupo DaAna</a>
+            <a href="../receitas/principalR.html">receitas</a>
+            <a href="#blogs">redes socias</a>
+        </nav>
+
+       
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass" id="busca-btn"></i>
+            
+            <i class="fa-solid fa-bars" id="menu-btn"></i>
+            <a href="#" id="toggle-button">
+                <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
+                <span id="cart-count" class="cart-count">0</span>
+              </a>
+              
+        </div>
+
+        <div class="busca-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <a href="#" class="logo">
+        <img src="../img/logo-daana.png" alt="">
+    </a>
+
+    <section class="home" id="home"></section>
+
+    <div class="barra"></div>
+
+    <h1 id="layer">Nossos Produtos</h1>
+    <div class="textinho">
+        <h2>Conheça mais sobre os produtos que fazem parte da família DaAna e como eles podem ajudar a tornar sua comida ainda mais gostosa.</h2>
+    </div>
+
+    <section class="secao-card">
+        <div class="cardd">
+            <div id="botão1" class="card" onclick="showSection('section1')">
+                <img src="../img/molhos/banner.png" alt="">
+            </div>
+            <div id="botão2" class="card" onclick="showSection('section2')">
+                <img src="../img/chá/banner-cha.png" alt="">
+            </div>
+        </div>
+        <div class="cardd">
+            <div id="botão3" class="card" onclick="showSection('section3')">
+                <img src="../img/card produtos.png" alt="">
+            </div>
+            <div id="botão4" class="card" onclick="showSection('section4')">
+                <img src="../img/card produtos.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================carrinho de compras========================== -->
+    <section class="container normal-section" id="cart">
+        <button id="close-button">X</button>
+        <h2 class="section-title">Carrinho</h2>
+    
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th class="table-head-item first-col">Item</th>
+                    <th class="table-head-item second-col">Preço</th>
+                    <th class="table-head-item third-col">Quantidade</th>
+                </tr>
+            </thead>
+    
+            <tbody></tbody>
+    
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="cart-total-container">
+                        <strong>Total</strong>
+                        <span>R$0,00</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    
+        <form id="checkout-form">
+            <div id="nomess">
+                <label for="customer-name">Nome:</label><br>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+            <div>
+                <label for="customer-cpf">CPF:</label><br>
+                <input type="text" id="customer-cpf" name="customer-cpf" required>
+            </div>
+            <div>
+                <label for="customer-phone">Número de Celular:</label><br>
+                <input type="text" id="customer-phone" name="customer-phone" required>
+            </div>
+        </form>
+    
+        
+        <button type="button" class="purchase-button" id="whatsapp-button">Finalizar pelo WhatsApp</button>
+    </section>
+    
+    
+    
+    
+    <!-- =================================================molhos============================================================ -->
+    <section id="section1" class="section active">
+        <div class="produto1">
+            
+            <div class="card-prod">
+                <strong class="product-title">Pimenta gourmet</strong>
+                <img   src="../img/molhos/MOLHO1.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$24,00</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button >
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">Molho Inglês</strong>
+                <img src="../img/molhos/MOLHO INGLES.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$27,90 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">Molho de Alho</strong>
+                <img src="../img/molhos/MOLHO2.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$19,00 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">Pimenta com l/coco</strong>
+                <img src="../img/molhos/MOLHO3.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$47,00 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">pimenta com alho </strong>
+                <img src="../img/molhos/MOLHO4.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$24,00 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            
+            <!-- segunda linha Outros produtos section 1 -->
+        </div>
+    
+        <div class="produto1">
+            <div class="card-prod">
+                <strong class="product-title">Pimenta tradicional</strong>
+                <img src="../img/molhos/MOLHO5.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$25,00 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">azeite</strong>
+                <img src="../img/molhos/AZ.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$avaliar valor</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">azeite de dendê</strong>
+                <img src="../img/molhos/DENDE1.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$3,50 </span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">azeite de dendê</strong>
+                <img src="../img/molhos/DENDE2.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$3,00 un</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">Pimenta biquinho</strong>
+                <img src="../img/molhos/PIM BIQ.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">avaliar preço uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            
+        </div>
+        <!-- terceira linha Outros produtos da section1 -->
+        <div class="produto1">
+            <div class="card-prod">
+                <strong class="product-title">Pimenta carolina</strong>
+                <img src="../img/molhos/PIM CAR1.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">avaliar preço pct</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">pimenta malagueta</strong>
+                <img src="../img/molhos/PIM MALAG.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$avaliar valor</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">pimenta super forte</strong>
+                <img src="../img/molhos/PIM SUPER FORTE.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">avaliar preço uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">pimenta rosa grão</strong>
+                <img src="../img/molhos/PIM1.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$19,00 un</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">Pimenta caiena</strong>
+                <img src="../img/molhos/PIM2.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <!-- Outros produtos da section1 -->
+        </div>
+        <div class="produto1">
+            <div class="card-prod">
+                <strong class="product-title">Pimenta calabresa</strong>
+                <img src="../img/molhos/PIM3.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">avaliar preço pct</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">molho shoyo</strong>
+                <img src="../img/molhos/SHOYU.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$avaliar valor</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">...</strong>
+                <img src="#" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">avaliar preço uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">...</strong>
+                <img src="#" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$19,00 un</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">...</strong>
+                <img src="#" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <!-- Outros produtos da section1 -->
+        </div>
+        
+    </section>
+
+    <!-- ===========================================================pimentas============================================================== -->
+    <section id="section2" class="section ">
+        <div class="produto2">
+            <div class="card-prod">
+                <strong class="product-title">chá de amora</strong>
+                <img src="../img/chá/c amora.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">chá de amora</strong>
+                <img src="../img/chá/c amora.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">chá de amora</strong>
+                <img src="../img/chá/c amora.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">chá de amora</strong>
+                <img src="../img/chá/c amora.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="card-prod">
+                <strong class="product-title">chá de amora</strong>
+                <img src="../img/chá/c amora.jpg" alt="pimenta" class="product-image">
+                <div class="product-price-container">
+                    <span class="product-price">R$30,00 uni</span> <br>
+                    <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+                </div>
+            </div>
+           
+        </div>
+        
+
+    </section>
+
+
+    <section id="section3" class="section">
+        <div class="card-prod">
+            <strong class="product-title">...</strong>
+            <img src="#" alt="pimenta" class="product-image">
+            <div class="product-price-container">
+                <span class="product-price">R$30,00 uni</span> <br>
+                <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="section4" class="section">
+        <div class="card-prod">
+            <strong class="product-title">...</strong>
+            <img src="#" alt="pimenta" class="product-image">
+            <div class="product-price-container">
+                <span class="product-price">R$30,00 uni</span> <br>
+                <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="fim">
+        <h1>final da pagina</h1>
+        <h2>Conheça mais sobre os produtos que fazem parte da família DaAna e como eles podem ajudar a tornar sua comida ainda mais gostosa.</h2>
+    </div>
+
+    <section class="footer">
+        <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">home</a>
+            <a href="#sobre">sobre</a>
+            <a href="#menu">menu</a>
+            <a href="#produtos">produtos</a>
+            <a href="#review">review</a>
+            <a href="#contato">contato</a>
+            <a href="#blogs">blogs</a>
+        </div>
+
+        <div class="credit">Criado por <span> Michael.devv</span> | site privado!</div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/4bfcba776f.js" crossorigin="anonymous"></script>
+    <script src="loja.js"></script>
+    <script src="./index.js"></script>
+   
+</body>
+</html>

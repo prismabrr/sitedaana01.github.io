@@ -1,0 +1,104 @@
+/* #c7310c */
+
+.slider-container{
+    max-width: 1180px;
+    width: 100%;
+    justify-content: center;
+    /* background-color: #EFEFEF; */
+}
+.card-image{
+    position: relative;
+    height:150px;
+    width: 150px;
+    background: #FFF;
+    padding: 3px;
+
+}
+.slide-content{
+    margin: 0 40px;
+    width: 100vh;
+
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* border-radius: 0%; */
+    border: 4px solid #c7310c;
+}
+.card{
+   width: 20px;
+    border-radius: 30px;
+    background-color:#FFF ;
+}
+.image-content, .card-content{
+    display: flex;
+    padding: 10px 14px;
+    flex-direction:column ;
+    align-items: center;
+    
+
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+    
+    
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position:absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    /* #6d6d6d */
+
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+.name{
+    font-size: 20px;
+    font-weight: 500px;
+    width: 20vh;
+    color: #333;
+    text-align: center;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+}
+.button:hover{
+    background:#265DF2 ;
+}
+
+
+
+
+
